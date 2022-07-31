@@ -1,8 +1,8 @@
 # movie-search-app
 Screenshots
-https://raw.githubusercontent.com/vivekpatt/movie-search-app/main/src/assets/Screenshot%202022-08-01%20at%203.54.51%20AM.png
-https://github.com/vivekpatt/movie-search-app/blob/main/src/assets/Screenshot%202022-08-01%20at%203.56.22%20AM.png?raw=true
-https://raw.githubusercontent.com/vivekpatt/movie-search-app/main/src/assets/Screenshot%202022-08-01%20at%203.56.36%20AM.png
+- https://raw.githubusercontent.com/vivekpatt/movie-search-app/main/src/assets/Screenshot%202022-08-01%20at%203.54.51%20AM.png
+- https://github.com/vivekpatt/movie-search-app/blob/main/src/assets/Screenshot%202022-08-01%20at%203.56.22%20AM.png?raw=true
+- https://raw.githubusercontent.com/vivekpatt/movie-search-app/main/src/assets/Screenshot%202022-08-01%20at%203.56.36%20AM.png
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.14.
 
