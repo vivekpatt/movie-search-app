@@ -1,0 +1,66 @@
+<h1 mat-dialog-title>{{data?.Title}}</h1>
+<div mat-dialog-content>
+    <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+        <div>
+            <div class="mat-caption mat-hint">
+                Rated
+            </div>
+            <div>
+                {{data?.Rated}}
+            </div>
+        </div>
+        <div>
+            <div class="mat-caption mat-hint">
+                Released
+            </div>
+            <div>
+                {{data?.Released}}
+            </div>
+        </div>
+        <div>
+            <div class="mat-caption mat-hint">
+                Runtime
+            </div>
+            <div>
+                {{data?.Runtime}}
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="mat-caption mat-hint">
+            Actors
+        </div>
+        <div>
+            {{data?.Actors}}
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="mat-caption mat-hint">
+            Plot
+        </div>
+        <div>
+            {{data?.Plot}}
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="mat-caption mat-hint">
+            BoxOffice
+        </div>
+        <div *ngIf="data?.BoxOffice;else na">
+            {{data?.BoxOffice | currency:"USD"}}
+        </div>
+    </div>
+</div>
+  <div mat-dialog-actions align="end">
+    <button mat-stroked-button color="primary" (click)="closeDialog()">Close</button>
+</div>
+
+
+<ng-template #na>
+    <div>
+        N/A
+    </div>
+</ng-template>

@@ -1,0 +1,13 @@
+@use '~@angular/material' as mat;
+
+.clickable {
+    cursor: pointer;
+    &:hover {
+        @include mat.elevation(4);
+        width: 225px !important;
+        transition: all .2s;
+    }
+}
+* {
+    transition: all .2s;
+}

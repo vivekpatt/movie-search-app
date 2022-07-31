@@ -1,0 +1,44 @@
+<h1>Search page</h1>
+<!-- <mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Leave a comment</mat-label>
+  <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+</mat-form-field> -->
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-form-field appearance="outline" [ngStyle]="{'margin.px': '0 16', 'width.px':650}">
+    <mat-label>Search Movies</mat-label>
+    <input matInput placeholder="Ex. Batman" type="text" (keyup)="search($event)" >
+  </mat-form-field>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <ng-container *ngIf="movieList.length;else noContent">
+    <ng-container *ngFor="let item of movieList; let i = index;">
+      <mat-card [ngStyle]="{'margin.px': 16, 'width.px':220}" class="clickable mat-elevation-z1" (click)="open(i)">
+        <mat-card-subtitle>
+          <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div>
+              #{{i+1}}&nbsp;&nbsp;
+            </div>
+            <div>{{item.Year}}</div>
+          </div>
+        </mat-card-subtitle>
+        <mat-card-title>
+          <div fxFlex="0 0 220px">{{item.Title}}</div>
+        </mat-card-title>
+        <img mat-card-image [src]="item.Poster" alt="movie poster" loading="lazy">
+        <mat-card-content>
+          <div class="mat-hint">
+            {{item.Genre}}
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </ng-container>
+</div>
+
+<ng-template #noContent>
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card>
+      No search result
+    </mat-card>
+  </div>
+</ng-template>
